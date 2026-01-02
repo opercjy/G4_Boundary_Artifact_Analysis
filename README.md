@@ -43,4 +43,6 @@ mkdir build && cd build
 cmake ..
 make -j4
 ./BoundaryTest run.mac
+cd analysis
+python plot_artifact.py ../build/Boundary_Result.root
 ```
