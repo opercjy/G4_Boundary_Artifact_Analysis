@@ -28,7 +28,7 @@
 | Case A: Default (Artifact) | Case B: Corrected (Solved) |
 |:---:|:---:|
 | ![Case A](analysis/CaseA_Result.png) | ![Case B](analysis/CaseB_Result.png) |
-| *V-shape 절단 및 소멸 위치 함몰(Dip) 발생* | *물리적 스텝 분포 회복 및 함몰 채워짐* |
+| *V-shape 절단 및 소멸 위치 근처에서 밀한 곳에서 과잉, 희박 곳에서 결핍을 동반한 함몰(Dip) 발생* | *물리적 스텝 분포 회복 및 밀한 곳에서 과잉과 희박한 곳에서 결핍이 채워짐* |
 
 ##  Usage (사용법)
 
