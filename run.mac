@@ -1,0 +1,32 @@
+# run.mac - Simulation Macro for Positron Transport
+
+# 1. 초기화 및 로깅 설정
+/run/initialize
+/run/verbose 1
+/tracking/verbose 0
+
+# 2. 입자 생성기 설정 (GPS)
+# 입자: 양전자 (Positron)
+/gps/particle e+
+
+# 위치: 납(Pb, Dense) 내부, 경계면(Z=0) 직전 50um 지점
+# (납 영역: Z = -20mm ~ 0mm)
+/gps/pos/type Plane
+/gps/pos/shape Square
+/gps/pos/centre 0. 0. -0.05 mm
+/gps/pos/halfx 1. mm
+/gps/pos/halfy 1. mm
+
+# 방향: +Z 방향 (Scintillator 쪽으로 발사)
+/gps/direction 0 0 1
+
+# 에너지: 1 MeV (일반적인 베타 붕괴 에너지 대역)
+/gps/energy 1 MeV
+
+# 3. ROOT 파일 이름 설정 (Analysis Manager가 사용)
+/analysis/setFileName Boundary_Result
+
+# 4. 빔 실행
+# 통계적 유의성을 위해 100,000개 입자 실행
+/run/printProgress 10000
+/run/beamOn 100000
